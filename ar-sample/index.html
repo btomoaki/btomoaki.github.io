@@ -10,16 +10,15 @@
 </head>
 
 <body style="margin:0px; overflow:hidden;">
+  <ul>
+    <li><a href="./arjs.html">マーカー型WebAR</a>(<a href="./marker/pattern-KMB.png">マーカー</a>)</li>
+    <li>マーカーレスWebAR(<a href="./tracking.js/assets/KMB.png">マーカー</a>)<ul>
+        <li><a href="./tracking.js/features_check.html">特長点抽出</a></li>
+        <li><a href="./tracking.js/features_and_camera_check.html">カメラ特長点抽出</a></li>
+      </ul>
+    </li>
+  </ul>
 
-  <a-scene embedded arjs="debugUIEnabled:false;">
-
-    <a-marker type='pattern' url='./marker/pattern-KMB.patt'>
-      <a-sphere scale=".25 .25 .25" position="0 .5 0" color="yellow" wireframe="true" />
-    </a-marker>
-
-    <a-entity camera></a-entity>
-
-  </a-scene>
 </body>
 
 </html>
