@@ -1,0 +1,28 @@
+<!DOCTYPE html>
+<html>
+
+<head>
+  <meta charset="utf-8">
+  <meta name="viewport" content="width=device-width,initial-scale=1">
+  <title>AR検証</title>
+  <script src="https://aframe.io/releases/0.6.1/aframe.min.js"></script>
+  <script src="https://rawgit.com/google-ar/three.ar.js/master/dist/three.ar.js"></script>
+  <script src="https://rawgit.com/chenzlabs/aframe-ar/master/dist/aframe-ar.js"></script>
+</head>
+
+<body style="margin:0px; overflow:hidden;">
+
+  <a-scene embedded arjs="debugUIEnabled:true;">
+
+    <a-marker type='pattern' url='./marker/pattern-KMB.patt'>
+      <a-sphere scale=".25 .25 .25" position="0 .5 0" color="yellow" wireframe="true" />
+    </a-marker>
+
+    <a-entity camera>
+      <a-text position="0 0 -1"></a-text>
+    </a-entity>
+
+  </a-scene>
+</body>
+
+</html>
