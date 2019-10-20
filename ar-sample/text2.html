@@ -1,0 +1,31 @@
+<!DOCTYPE html>
+<html>
+
+<head>
+  <meta charset="utf-8">
+  <title>AR検証</title>
+  <script src="/assets/js/aframe.min.js"></script>
+  <script src="/assets/js/aframe-ar.js"></script>
+  <script src="https://unpkg.com/aframe-html-shader@0.2.0/dist/aframe-html-shader.min.js"></script>
+  <script src="/assets/js/html2canvas.min.js"></script>
+  <script>
+    ARjs.Context.baseURL = '/assets/js/three.js/'
+  </script>
+</head>
+
+<body style='margin : 0px; overflow: hidden;'>
+
+  <div style="width: 350%; height: 15px; position: fixed; left: 0; top: 0; z-index: -1; overflow: hidden">
+    <span id="element" style="font-size:15em;color: #DDD; text-shadow: 1px 1px 0 rgba(0,0,0,.2);">人との縁を大事に心に残るサービスを</span>
+  </div>
+
+  <a-scene embedded arjs='debugUIEnabled: false; patternRatio=0.75; trackingMethod: best;'>
+    <a-marker type='pattern' url='/ar-sample/marker/text2.patt'>
+      <a-entity scale="1 1 1" geometry="primitive: plane; width: 5; height: 0.5" position="0 .5 0"
+        material="shader: html; target: #element" rotation="-45 0 0"></a-entity>
+    </a-marker>
+    <a-camera-static />
+  </a-scene>
+</body>
+
+</html>
