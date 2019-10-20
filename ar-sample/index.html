@@ -7,6 +7,29 @@
   <title>AR検証</title>
   <script src="https://aframe.io/releases/0.6.1/aframe.min.js"></script>
   <script src="https://jeromeetienne.github.io/AR.js/aframe/build/aframe-ar.js"></script>
+  <style>
+    ul li ul li {
+      display: -webkit-box;
+      /* safari, Chrome */
+      display: -moz-box;
+      /* Firefox */
+      display: -o-box;
+      /* Opera */
+      display: -ms-box;
+      /* IE */
+      display: box;
+      /* ベンダープレフィックスなし */
+      -webkit-box-align: center;
+      /* safari, Chrome対応 */
+      -moz-box-align: center;
+      /* Firefox対応 */
+      -o-box-align: center;
+      /* Opera対応 */
+      -ms-box-align: center;
+      /* IE対応 */
+      box-align: center;
+    }
+  </style>
 </head>
 
 <body style="margin:0px; overflow:hidden;">
@@ -15,6 +38,11 @@
     <li>検証<ul>
         <li><a href="./resize_and_move.html">大きさと移動</a></li>
         <li><a href="./roll.html">回転と円とテクスチャ</a></li>
+      </ul>
+    </li>
+    <li>マルチバイト検証<ul>
+        <li>QR/AR共通マーカー：<img width="200" src="./marker/text2.png"></li>
+        <li>QRコード：<img width="200" src="./marker/text3.png"> ARマーカー：<img width="200" src="./marker/mk-text3.png"></li>
       </ul>
     </li>
   </ul>
