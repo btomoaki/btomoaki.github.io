@@ -4,22 +4,20 @@
 <head>
   <meta charset="utf-8">
   <title>AR検証</title>
+
   <script src="/assets/js/aframe.min.js"></script>
   <script src="/assets/js/aframe-ar.js"></script>
-
 </head>
 
 <body style='margin : 0px; overflow: hidden;'>
 
   <a-scene embedded arjs='debugUIEnabled: false; trackingMethod: best;'>
-
-    <a-marker type='pattern' url='/ar-sample/marker/pattern-KMB.patt'>
-      <a-sphere scale=".25 .25 .25" position="0 .5 0" color="yellow" wireframe="true" radius="5" />
+    <a-marker type='pattern' url='/ar-sample/marker/text3.patt'>
+      <a-text value="人との縁を大事に心に残るサービスを" align="center" font="/assets/fonts/kosugi/Kosugi-Regular-msdf.json" negate="false" scale="3 3 3" position="0 .5 0" color="black" rotation="-80 0 0"></a-text>
     </a-marker>
-
     <a-camera-static />
-
   </a-scene>
+
 </body>
 
 </html>
